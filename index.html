@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Salman Fareed — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- progress bar -->
+  <div id="progress-wrap">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="site-header">
+    <nav class="nav-inner container">
+      <div class="logo">Salman <span style="color: #ff0062">Developer</span></div>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="right-controls">
+        <a class="btn resume-btn" href="resume.pdf" download>
+          <!-- simple download icon -->
+          <svg class="icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden>
+            <path d="M12 3v10" stroke="currentColor" stroke-width="2" fill="none" />
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" fill="none" />
+            <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+          Resume
+        </a>
+        <button id="nav-toggle" aria-label="Toggle nav">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="section hero reveal">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi — I'm <span class="accent">Salman</span></h1>
+        <p class="hero-sub">I build web apps, smart assistants, and games.</p>
+        <p class="typing-line">I'm a <strong id="typed-text" aria-live="polite"></strong><span id="cursor"
+            class="cursor">|</span></p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="profile.jpg" alt="Profile" class="profile" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about reveal">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I’m a passionate Python developer with a strong focus on AI chatbot systems and game development. I love
+          creating intelligent, interactive, and visually engaging projects that combine creativity with technology. My
+          work blends logic, design, and innovation — whether I’m building an AI assistant that understands human speech
+          or designing a fun, responsive game that challenges players in new ways.
+
+          With a solid foundation in Python, I develop projects that integrate machine learning, natural language
+          processing, and automation, enabling smart systems that learn and adapt. On the game development side, I
+          explore engines like Unity, Ursina, and Pygame, bringing imagination to life through gameplay mechanics,
+          visuals, and immersive experiences.
+
+          I’m always excited by new challenges — whether that’s improving AI responses, optimizing code performance, or
+          experimenting with creative storytelling in games. My ultimate goal is to keep learning, build smarter
+          systems, and create software that feels both intelligent and inspiring.</p>
+        <ul class="about-list">
+          <li>🎯 Problem solving & product-minded</li>
+          <li>💻 Python, JavaScript, HTML/CSS</li>
+          <li>⚙️ AI experiments & small game dev</li>
+          <li>🎮 Game Developer | 🤖 AI Chatbot Engineer | 🐍 Python Enthusiast</li>
+          <li>💡 Passionate about interactive systems, automation, and creative design</li>
+          <li>🚀 Always exploring new technologies to turn ideas into reality</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
+    <div class="container">
+      <h2>Skills</h2>
+      <div id="skills-container" class="cards"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="filter-buttons">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="complete">Complete</button>
+        <button class="filter" data-filter="in progress">In Progress</button>
+      </div>
+      <div id="projects-container" class="cards"></div>
+      <div id="no-projects" class="muted-note" hidden>No projects found — check your Projects sheet.</div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section reveal">
+    <div class="container">
+      <h2>Experience</h2>
+      <div id="experience-container" class="cards timeline"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2>Contact</h2>
+      <div id="contact-container" class="cards contact-grid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> Salman Fareed Chishty</small>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close">✕</button>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
